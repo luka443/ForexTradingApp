@@ -1,11 +1,14 @@
 import os
 from datetime import datetime
 import pandas as pd
+import yfinance as yf
 import requests
 from bs4 import BeautifulSoup
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib import style
+from scipy import stats
+import numpy as np
 
 class ScrapeAndPlot:
     def __init__(self, stock_num, instrument_name):
@@ -48,17 +51,52 @@ class ScrapeAndPlot:
 
         self.ax.clear()
         self.ax.plot(xs, ys, label=self.instrument_name)
-        self.ax.set_title(self.instrument_name, fontsize=12)
+        self.ax.set_title('live: '+self.instrument_name, fontsize=14)
         self.ax.set_xlabel('Czas')
         self.ax.set_ylabel('Cena')
         self.ax.legend()
 
+        #plt.title('Ceny akcji (yfinance)')
+
+
     def run_animation(self):
         try:
             ani = animation.FuncAnimation(self.fig, self.animate_price, interval=1000, save_count=10)
-
             plt.tight_layout()
+
+            data = yf.download(self.instrument_name+'=X', '2022-12-22', '2023-12-22')
+
+            # Tworzenie wykresu
+            plt.figure(figsize=(10, 6))
+            plt.title(f'Wahania ceny 1 rok:'+ self.instrument_name+'=X')
+            plt.xlabel('Data')
+            plt.ylabel('Cena zamknięcia')
+
+            # Rysowanie wykresu ceny zamknięcia
+            data['Close'].plot(label='Cena Zamknięcia')
+
+            # Dodanie linii regresji
+            # Przekształcenie indeksów na liczby dla regresji
+            x = range(len(data.index))
+            y = data['Close'].values
+            slope, intercept, r_value, p_value, std_err = stats.linregress(x, y)
+
+            # Wyliczenie punktów linii regresji
+            regression_line = [intercept + slope * i for i in x]
+
+            # Dodanie linii regresji do wykresu
+            plt.plot(data.index, regression_line, label='Srednia', color='red')
+
+            # Dodanie legendy
+            plt.legend()
+
+            # Wyświetlenie wykresu
             plt.show()
+            # plt.figure()
+            # data1 = yf.download(self.stock_num+'=X', '2022-12-22', '2023-12-22')
+            # plt.title('Wahania ceny 1 rok: '+ self.stock_num)
+            # data1.Close.plot()
+            # plt.show()
         except KeyboardInterrupt:
             print("Przerwano przez użytkownika.")
 
@@ -66,6 +104,5 @@ class ScrapeAndPlot:
             # Wyczyść plik CSV po zakończeniu programu
             if os.path.exists('real_time_stock.csv'):
                 os.remove('real_time_stock.csv')
-
 
 
