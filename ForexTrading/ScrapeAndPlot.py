@@ -9,6 +9,7 @@ import matplotlib.animation as animation
 from matplotlib import style
 from scipy import stats
 import numpy as np
+from Data_4_ML import Data4ML
 
 class ScrapeAndPlot:
     def __init__(self, stock_num, instrument_name):
@@ -104,5 +105,13 @@ class ScrapeAndPlot:
             # Wyczyść plik CSV po zakończeniu programu
             if os.path.exists('real_time_stock.csv'):
                 os.remove('real_time_stock.csv')
+
+    def Data_ML(self):
+        data = yf.download(self.instrument_name+"=X", start='2023-06-28', period='6m', interval="1h")
+        datta = Data4ML(data, self.instrument_name)
+        print("nigg")
+        datta.Storing_Dataset()
+
+
 
 

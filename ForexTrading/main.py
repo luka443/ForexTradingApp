@@ -36,10 +36,11 @@ class MainApp:
     def run_scrape_and_plot(self):
         instrument_name = self.instrument_entry.get()
         scrape_and_plot = ScrapeAndPlot(instrument_name, instrument_name)
-
+        scrape_and_plot.Data_ML()
         self.root.withdraw()
 
         scrape_and_plot.run_animation()
+
 
         self.root.destroy()
 
