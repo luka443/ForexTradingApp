@@ -109,8 +109,9 @@ class ScrapeAndPlot:
     def Data_ML(self):
         data = yf.download(self.instrument_name+"=X", start='2023-06-28', period='6m', interval="1h")
         datta = Data4ML(data, self.instrument_name)
-        print("nigg")
+
         datta.Storing_Dataset()
+        datta.TrainingModel()
 
 
 
