@@ -1,8 +1,9 @@
 # ForexTradingApp
-## Aplikacja handlu na rynku Forex. Projekt został stworzony w języku Python, wykorzystując biblioteki ułatwiające interakcję z rynkiem finansowym.
+### Aplikacja handlu na rynku Forex. Projekt został stworzony w języku Python, wykorzystując biblioteki ułatwiające interakcję z rynkiem finansowym.
+<br />
 
-***Narazie korzsytamy z Random Forest Classifier (Klasyfikator Lasu Losowego. Las losowy składa się z wielu drzew decyzyjnych, które są tworzone na podstawie losowo wybranych próbek ze zbioru danych treningowych. Każde drzewo w lesie losowym dokonuje niezależnych predykcji, a ostateczna predykcja jest wynikiem głosowania lub średniej wyników wszystkich drzew.***
-
+***Narazie korzystamy z Random Forest Classifier (Klasyfikator Lasu Losowego). Las losowy składa się z wielu drzew decyzyjnych, które są tworzone na podstawie losowo wybranych próbek ze zbioru danych treningowych. Każde drzewo w lesie losowym dokonuje niezależnych predykcji, a ostateczna predykcja jest wynikiem głosowania lub średniej wyników wszystkich drzew.***
+<br />
 ```
 pip install yfinance
 ```
