@@ -8,7 +8,10 @@ pip install yfinance
 pip install pandas
 ```
 
+
+
 ### Użytkownik wpisuje kurs walut(gui jest słabej jakości jest to tylko dla zwizualizowania przyszłego wyniku)
+
 ![w1](https://github.com/luka443/ForexTradingApp/assets/109036862/52a7ba84-fe03-4eec-adf7-213f0551db28)
 
 ### Po wpisaniu ukazują sie wykresy (wykres live działa w czasie rzeczywistym) :
