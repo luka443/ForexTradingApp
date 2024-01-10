@@ -19,7 +19,7 @@ pip install pandas
 
 ![w2](https://github.com/luka443/ForexTradingApp/assets/109036862/386d3884-4f57-4c31-93ee-e3cc8778dbd9)
 
-### Oraz prawdopodobieństwo wyniku nauczonego modelu ML:
+### Oraz prawdopodobieństwo wyniku nauczonego modelu ML (czyli przewidywanie czy cena w przyszłym czasie pójdzie w góre lub w dół:
 
 ![w3](https://github.com/luka443/ForexTradingApp/assets/109036862/de3327f8-42b0-45ff-9295-db7fa40979f7)
 
