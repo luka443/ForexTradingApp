@@ -34,3 +34,9 @@ pip install pandas
 <br />
 
 ### Wynik przewidywań zostanie jeszcze lepiej zwizualizowany i przedstawiony
+
+
+
+<br />
+<br />
+<br />
