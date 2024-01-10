@@ -3,5 +3,6 @@ aplikacja handlu na rynku Forex. Projekt został stworzony w języku Python, wyk
 ```
 pip install yfinance
 ```
+```
 pip install pandas
 ```
