@@ -9,6 +9,9 @@ pip install yfinance
 ```
 pip install pandas
 ```
+```
+pip install matplotlib
+```
 
 <br />
 
