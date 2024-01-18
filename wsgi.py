@@ -93,7 +93,7 @@ def get_stock_info(tickers):
     return stocks_df
 
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['POST', 'GET'])
 def index():
     ticker = request.form.get('ticker')
     if ticker is None:
