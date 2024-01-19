@@ -159,7 +159,7 @@ External Libraries Used
 
 Tests:
 
-    Test sprawdza, czy funkcja poprawnie pobiera dane i przetwarza je na DataFrame, 
+    Test1 sprawdza, czy funkcja poprawnie pobiera dane i przetwarza je na DataFrame, 
         a także czy generuje plik CSV o odpowiedniej nazwie.
 
         Kategorie testów:
