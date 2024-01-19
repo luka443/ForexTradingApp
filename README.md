@@ -1,20 +1,19 @@
 # ForexTradingApp
 Clone the Repository:
 
-bash
 
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+
+    git clone https://github.com/yourusername/your-repo.git
+    cd your-repo
 
 Install Dependencies:
 
-bash
 
-pip install Flask yfinance matplotlib torch
+    pip install Flask yfinance matplotlib torch
 
 Run the Application:
 
-bash
+
 
     python app.py
 
