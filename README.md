@@ -157,37 +157,35 @@ External Libraries Used
     torch: PyTorch library for machine learning.
 
 
-Tests:
 
-    Test1:
-        sprawdza, czy funkcja poprawnie pobiera dane i przetwarza je na DataFrame, 
-        a także czy generuje plik CSV o odpowiedniej nazwie.
+Test1:
 
-        Kategorie testów:
-        - Wywołanie funkcji z poprawnymi danymi.
-        - Sprawdzenie, czy wynik jest obiektem DataFrame z odpowiednimi kolumnami.
-        - Sprawdzenie, czy plik CSV został utworzony.
+    Checks if the function correctly fetches data and processes it into a DataFrame, as well as generates a CSV file with the correct name.
+    Test categories:
 
-        Opis kategorii testów:
-        1. Funkcja jest wywoływana z przykładowymi danymi (symbol akcji i okres czasu).
-        2. Sprawdzane jest, czy wynik jest obiektem DataFrame.
-        3. Sprawdzane jest, czy DataFrame zawiera kolumny 'Date' i 'Close'.
-        4. Sprawdzane jest, czy plik CSV został utworzony w odpowiednim miejscu.
+    Calling the function with valid data.
+    Verifying if the result is a DataFrame with the appropriate columns.
+    Checking if the CSV file has been created.
+    Test description:
 
-        Po zakończeniu testu, plik CSV jest usuwany.
+    The function is called with sample data (stock symbol and time period).
+    It is verified whether the result is a DataFrame.
+    It is checked whether the DataFrame contains the 'Date' and 'Close' columns.
+    It is confirmed whether the CSV file has been created in the appropriate location.
+    After the test, the CSV file is removed.
 
-    Test4:    
-        Testuje funkcję save_model z modułu model_trainer.
-        Test sprawdza, czy funkcja poprawnie zapisuje model do pliku na dysku.
+Test4:
 
-        Kategorie testów:
-        - Tworzenie przykładowego modelu.
-        - Wywołanie funkcji zapisującej model.
-        - Sprawdzenie, czy plik z modelem został utworzony na dysku.
+    Tests the save_model function from the model_trainer module.
+    The test checks whether the function correctly saves the model to a file on disk.
+    Test categories:
 
-        Opis kategorii testów:
-        1. Tworzony jest przykładowy model LSTM o określonych parametrach.
-        2. Wywoływana jest funkcja save_model z modelem i nazwą modelu.
-        3. Sprawdzane jest, czy plik z modelem został utworzony w odpowiedniej lokalizacji.
+    Creating a sample model.
+    Calling the function to save the model.
+    Verifying if the model file has been created on disk.
+    Test description:
 
-        Po zakończeniu testu, plik z modelem jest usuwany.
+    A sample LSTM model with specified parameters is created.
+    The save_model function is called with the model and the model name.
+    It is verified whether the model file has been created in the appropriate location.
+    After the test, the model file is removed.
