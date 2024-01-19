@@ -291,39 +291,26 @@
       </div>
     </div>
 
-    <div class="card mb-3 p-3" >
+    <div class="container my-5">
+      <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
 
+        <h1 class="text-body-emphasis">Price prediction for tomorrow</h1>
+        <br>
+        <p class="col-lg-6 mx-auto mb-4 text-center">
+<!--          Price prediction &emsp; Change $ &emsp; Change %<br>-->
+          {% if change > 0 %}
+            <p class="h3">Price Pre: <b style="color: green">{{prediction}}$ </b></p>
+            <p class="h3">Change $: <b style="color: green">{{change}}$ </b></p>
+            <p class="h3">Change %: <b style="color: green">{{change2}}%</b></p>
+          {% else %}
+            <p class="h3"><b style="color: red">{{prediction}}$ </b></p>
+            <p class="h3"><b style="color: red">{{change}}$ </b></p>
+            <p class="h3"><b style="color: red">{{change2}}%</b></p>
+          {% endif %}
 
-          <div class="card-body">
-            <h2 class="card-title text-center ">Price prediction for tomorrow</h2>
-              <div class="p-3">
-                <table class="table text-center table-borderless">
-                  <thead>
-                    <tr>
-                      <th scope="col">Price tomorrow</th>
-                      <th scope="col">Change $</th>
-                      <th scope="col">Change %</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                      {% if change > 0 %}
-                        <td style="color: green"><b>{{prediction}} $</b></td>
-                        <td style="color: green"><b>{{change}} $</b></td>
-                        <td style="color: green"><b>{{change2}} %</b></td>
-                      {% else %}
-                        <td style="color: red"><b>{{prediction}} $</b></td>
-                        <td style="color: red"><b>{{change}} $</b></td>
-                        <td style="color: red"><b>{{change2}} %</b></td>
-                      {% endif %}
-                      </tr>
-                  </tbody>
-                </table>
-              </div>
-<!--            <p class="card-text"><small class="text-body-secondary ">Last updated {{time}}</small></p>-->
-          </div>
+        </p>
 
-
+      </div>
     </div>
 
     <footer class="pt-3 mt-4 text-body-secondary border-top">
