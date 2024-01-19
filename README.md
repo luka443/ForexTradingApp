@@ -155,3 +155,22 @@ External Libraries Used
     yfinance: Fetches stock market data.
     Matplotlib: Creates plots.
     torch: PyTorch library for machine learning.
+
+
+Tests:
+
+    Test sprawdza, czy funkcja poprawnie pobiera dane i przetwarza je na DataFrame, 
+        a także czy generuje plik CSV o odpowiedniej nazwie.
+
+        Kategorie testów:
+        - Wywołanie funkcji z poprawnymi danymi.
+        - Sprawdzenie, czy wynik jest obiektem DataFrame z odpowiednimi kolumnami.
+        - Sprawdzenie, czy plik CSV został utworzony.
+
+        Opis kategorii testów:
+        1. Funkcja jest wywoływana z przykładowymi danymi (symbol akcji i okres czasu).
+        2. Sprawdzane jest, czy wynik jest obiektem DataFrame.
+        3. Sprawdzane jest, czy DataFrame zawiera kolumny 'Date' i 'Close'.
+        4. Sprawdzane jest, czy plik CSV został utworzony w odpowiednim miejscu.
+
+        Po zakończeniu testu, plik CSV jest usuwany.
