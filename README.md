@@ -159,7 +159,8 @@ External Libraries Used
 
 Tests:
 
-    Test1 sprawdza, czy funkcja poprawnie pobiera dane i przetwarza je na DataFrame, 
+    Test1:
+        sprawdza, czy funkcja poprawnie pobiera dane i przetwarza je na DataFrame, 
         a także czy generuje plik CSV o odpowiedniej nazwie.
 
         Kategorie testów:
@@ -174,3 +175,19 @@ Tests:
         4. Sprawdzane jest, czy plik CSV został utworzony w odpowiednim miejscu.
 
         Po zakończeniu testu, plik CSV jest usuwany.
+
+    Test4:    
+        Testuje funkcję save_model z modułu model_trainer.
+        Test sprawdza, czy funkcja poprawnie zapisuje model do pliku na dysku.
+
+        Kategorie testów:
+        - Tworzenie przykładowego modelu.
+        - Wywołanie funkcji zapisującej model.
+        - Sprawdzenie, czy plik z modelem został utworzony na dysku.
+
+        Opis kategorii testów:
+        1. Tworzony jest przykładowy model LSTM o określonych parametrach.
+        2. Wywoływana jest funkcja save_model z modelem i nazwą modelu.
+        3. Sprawdzane jest, czy plik z modelem został utworzony w odpowiedniej lokalizacji.
+
+        Po zakończeniu testu, plik z modelem jest usuwany.
