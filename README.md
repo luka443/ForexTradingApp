@@ -65,9 +65,9 @@ Functions
         
     download_and_strip_data(stock, period)
 
-    Downloads historical stock price data using the yfinance library for the given stock symbol (stock) and time period (period).
-    Saves the downloaded data as a CSV file and reads it back, extracting only the 'Date' and 'Close' columns.
-    Returns the cleaned dataframe.
+        Downloads historical stock price data using the yfinance library for the given stock symbol (stock) and time period (period).
+        Saves the downloaded data as a CSV file and reads it back, extracting only the 'Date' and 'Close' columns.
+        Returns the cleaned dataframe.
 
     prepare_dataframe_for_lstm(df)
     
